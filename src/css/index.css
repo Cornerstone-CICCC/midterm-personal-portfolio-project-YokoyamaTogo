@@ -11,6 +11,11 @@ body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
+p {
+  line-height: 2em;
+  margin: 1em 0;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -45,4 +50,25 @@ body {
   position: absolute;
   color: #e0e0e0;
   font-size: 100px;
+}
+
+body > section {
+  padding: 30px 50px 40px;
+  margin: auto;
+}
+
+.intro__icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+
+  margin-top: 30px;
+}
+
+.intro__icons img {
+  width: 96px;
+  height: 96px;
+
+  opacity: 0.9;
 }
