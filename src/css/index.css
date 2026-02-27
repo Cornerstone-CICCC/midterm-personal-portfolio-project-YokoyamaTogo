@@ -5,4 +5,44 @@
 }
 
 body {
+  font-size: 15px;
+  color: #222;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 500px;
+  margin-bottom: 30px;
+  background-color: #EEE;
+
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.header h1 {
+  position: relative;
+  font-size: 14px;
+}
+
+.header__profile-img {
+  position: relative;
+  display: block;
+
+  width: 140px;
+  margin-bottom: 20px;
+
+  border-radius: 100px;
+}
+
+.header__icon {
+  position: absolute;
+  color: #e0e0e0;
+  font-size: 100px;
 }
