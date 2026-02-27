@@ -72,3 +72,19 @@ body > section {
 
   opacity: 0.9;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 100px;
+  height: 300px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+
+  background-color: #EEE;
+  text-align: center;
+}
