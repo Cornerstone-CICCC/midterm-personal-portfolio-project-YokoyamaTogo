@@ -57,6 +57,7 @@ body > section {
   margin: auto;
 }
 
+/********************** intro section ********************** */
 .intro__icons {
   display: flex;
   flex-wrap: wrap;
@@ -73,6 +74,82 @@ body > section {
   opacity: 0.9;
 }
 
+/********************** link section ********************** */
+.link__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.link__item {
+  position: relative;
+  margin: 20px;
+  width: 320px;
+}
+
+@media (max-width: 900px) {
+  .link__item {
+    margin: 15px 15px 10px;
+  }
+}
+
+.link__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  aspect-ratio: 16/9;
+
+  background-color: #EEE;
+  text-decoration: none;
+  text-align: center;
+  color: #570;
+  opacity: 0;
+  top: 15px;
+  transition: transform 0.2s, background-color 0.2s, top 0.5s, opacity 0.5s;
+}
+
+.link__button.show {
+  opacity: 1;
+  top: 0;
+}
+
+.link__button:hover {
+  transform: scale(1.1);
+  background-color: rgb(242, 250, 220);
+}
+
+.link__button:hover i {
+  color: rgb(215, 231, 173);
+}
+
+.link__button i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ddd;
+  font-size: 100px;
+  transition: 0.2s;
+}
+
+.link__button h3 {
+  position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  .link__button {
+    aspect-ratio: 3/1;
+  }
+  .link__button i {
+    font-size: 60px;
+  }
+}
+
+/********************** footer section ********************** */
 footer {
   display: flex;
   align-items: center;
@@ -88,3 +165,4 @@ footer {
   background-color: #EEE;
   text-align: center;
 }
+
