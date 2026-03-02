@@ -16,6 +16,10 @@ p {
   margin: 1em 0;
 }
 
+a {
+    color: #570;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -74,8 +78,8 @@ body > section {
   opacity: 0.9;
 }
 
-/********************** link section ********************** */
-.link__list {
+/********************** shared card list ********************** */
+.card-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -83,19 +87,19 @@ body > section {
   list-style: none;
 }
 
-.link__item {
+.card-list__item {
   position: relative;
   margin: 20px;
   width: 320px;
 }
 
 @media (max-width: 900px) {
-  .link__item {
+  .card-list__item {
     margin: 15px 15px 10px;
   }
 }
 
-.link__button {
+.card-list__button {
   position: relative;
   display: flex;
   align-items: center;
@@ -113,21 +117,21 @@ body > section {
   transition: transform 0.2s, background-color 0.2s, top 0.5s, opacity 0.5s;
 }
 
-.link__button.show {
+.card-list__button.show {
   opacity: 1;
   top: 0;
 }
 
-.link__button:hover {
+.card-list__button:hover {
   transform: scale(1.1);
   background-color: rgb(242, 250, 220);
 }
 
-.link__button:hover i {
+.card-list__button:hover i {
   color: rgb(215, 231, 173);
 }
 
-.link__button i {
+.card-list__button i {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -136,16 +140,157 @@ body > section {
   transition: 0.2s;
 }
 
-.link__button h3 {
+.card-list__button h3 {
   position: relative;
 }
 
 @media screen and (max-width: 900px) {
-  .link__button {
+  .card-list__button {
     aspect-ratio: 3/1;
   }
-  .link__button i {
+  .card-list__button i {
     font-size: 60px;
+  }
+}
+
+/********************** project modal ********************** */
+.card-list__modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+  overscroll-behavior: contain;
+}
+
+.card-list__modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body:has(.card-list__modal:target) {
+  overflow: hidden;
+}
+
+.card-list__modal-overlay {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.card-list__modal-content {
+  position: relative;
+  width: min(720px, 90vw);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  overscroll-behavior: contain;
+}
+
+.card-list__modal-content section {
+  position: relative;
+}
+
+.card-list__modal-content > nav {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card-list__modal-content > nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #EEE;
+  color: #570;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.card-list__modal-content > nav a:hover {
+  transform: scale(1.08);
+  background: rgb(242, 250, 220);
+}
+
+.card-list__modal  section > i {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  color: #eee;
+  font-size: 200px;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.card-list__modal-content img {
+  margin: 0 18px 25px 0;
+}
+
+.card-list__modal-content img.border {
+  border: 1px solid #ddd;
+}
+.card-list__modal-content h3 {
+  margin-bottom: 1em;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #333;
+  font-size: 20px;
+}
+.card-list__modal-content h4 {
+  margin: 1.5em 0 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+  clear: both;
+}
+.card-list__modal-content p {
+  margin: 0.8em 0;
+}
+.card-list__modal-content p strong {
+  background: linear-gradient(transparent 70%, rgb(220, 255, 132) 0%);
+}
+.card-list__modal-content ul {
+  padding: 10px 10px 10px 40px;
+  background-color: #eee;
+  clear: both;
+}
+
+@media (min-width: 960px) {
+  .card-list__modal-content section {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  .card-list__modal-content section > i,
+  .card-list__modal-content section > h3,
+  .card-list__modal-content section > h4,
+  .card-list__modal-content section > ul {
+    grid-column: 1 / -1;
+  }
+
+  .card-list__modal-content section > img {
+    grid-column: 1;
+  }
+
+  .card-list__modal-text {
+    grid-column: 2;
   }
 }
 
@@ -165,4 +310,3 @@ footer {
   background-color: #EEE;
   text-align: center;
 }
-
