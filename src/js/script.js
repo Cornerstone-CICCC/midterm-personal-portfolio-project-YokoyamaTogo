@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   window.document.addEventListener('scroll', () => {
     sections.forEach(section => {
       if (!inScreen(section)) return
-      [...section.querySelectorAll('.link__button')].reduce((delay, button) => {
+      [...section.querySelectorAll('.card-list__button')].reduce((delay, button) => {
         setTimeout(() => button.classList.add('show'), delay)
         return delay + 200
       }, 0)
