@@ -6,6 +6,7 @@
 
 :root {
   --color-accent: #6599ed;
+  --color-accent-hover: #2d6bd7;
   --color-surface: #eef4ff;
   --color-surface-hover: #dbeafe;
   --color-icon-hover: #93c5fd;
@@ -25,7 +26,11 @@ p {
 }
 
 a {
-    color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
 }
 
 .header {
@@ -84,6 +89,66 @@ body > section {
   height: 96px;
 
   opacity: 0.9;
+}
+
+/********************** work experiences ********************** */
+.work-experiences__list {
+  list-style: none;
+}
+
+.work-experiences__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 40px auto 20px;
+  width: min(920px, 100%);
+}
+
+.work-experiences__company {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 320px;
+  padding: 0;
+  background-color: #fff;
+  text-decoration: none;
+  text-align: left;
+  color: var(--color-accent);
+  transition: color 0.2s;
+}
+
+.work-experiences__company:hover {
+  color: var(--color-accent-hover);
+}
+
+.work-experiences__company img {
+  margin-right: 12px;
+}
+
+.work-experiences__company h3 {
+  margin: 0;
+}
+
+.work-experiences__summary {
+  flex: 1;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .work-experiences__item {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 15px 10px;
+  }
+
+  .work-experiences__company {
+    flex-basis: auto;
+  }
+
+  .work-experiences__summary {
+    margin-top: 12px;
+  }
 }
 
 /********************** shared card list ********************** */
