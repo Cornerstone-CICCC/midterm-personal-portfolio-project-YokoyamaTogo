@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-accent: #6599ed;
+  --color-surface: #eef4ff;
+  --color-surface-hover: #dbeafe;
+  --color-icon-hover: #93c5fd;
+  --color-highlight: #bfdbfe;
+}
+
 body {
   font-size: 15px;
   color: #222;
@@ -17,7 +25,7 @@ p {
 }
 
 a {
-    color: #570;
+    color: var(--color-accent);
 }
 
 .header {
@@ -111,7 +119,7 @@ body > section {
   background-color: #EEE;
   text-decoration: none;
   text-align: center;
-  color: #570;
+  color: var(--color-accent);
   opacity: 0;
   top: 15px;
   transition: transform 0.2s, background-color 0.2s, top 0.5s, opacity 0.5s;
@@ -124,11 +132,11 @@ body > section {
 
 .card-list__button:hover {
   transform: scale(1.1);
-  background-color: rgb(242, 250, 220);
+  background-color: var(--color-surface-hover);
 }
 
 .card-list__button:hover i {
-  color: rgb(215, 231, 173);
+  color: var(--color-icon-hover);
 }
 
 .card-list__button i {
@@ -218,14 +226,14 @@ body:has(.card-list__modal:target) {
   height: 44px;
   border-radius: 999px;
   background: #EEE;
-  color: #570;
+  color: var(--color-accent);
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
 }
 
 .card-list__modal-content > nav a:hover {
   transform: scale(1.08);
-  background: rgb(242, 250, 220);
+  background: var(--color-surface-hover);
 }
 
 .card-list__modal  section > i {
@@ -262,11 +270,11 @@ body:has(.card-list__modal:target) {
   margin: 0.8em 0;
 }
 .card-list__modal-content p strong {
-  background: linear-gradient(transparent 70%, rgb(220, 255, 132) 0%);
+  background: linear-gradient(transparent 70%, var(--color-highlight) 0%);
 }
 .card-list__modal-content ul {
   padding: 10px 10px 10px 40px;
-  background-color: #eee;
+  background-color: var(--color-surface);
   clear: both;
 }
 
