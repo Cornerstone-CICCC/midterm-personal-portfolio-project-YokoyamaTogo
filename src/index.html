@@ -35,23 +35,106 @@
     </div>
   </section>
 
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <ul class="card-list">
+      <li class="card-list__item">
+        <a href="#project-couplink" class="card-list__button show">
+          <i class="ph-bold ph-heart"></i>
+          <h3>Couplink</h3>
+        </a>
+        <article id="project-couplink" class="card-list__modal">
+          <a href="#projects" class="card-list__modal-overlay" aria-label="Close modal"></a>
+          <div class="card-list__modal-content">
+            <section>
+              <i class="ph-bold ph-heart"></i>
+              <h3>Couplink</h3>
+              <img src="./images/couplink.png" alt="Couplink app top image" width="200">
+              <div class="card-list__modal-text">
+                <p>I joined the development team of the dating app “Couplink” as a Web Engineer.</p>
+                <p>Although Couplink is a smartphone application, its core system is built on a web-based architecture.</p>
+                <p>
+                  Within six months of joining the company,
+                  <strong>I implemented a payment system using Stripe,</strong> which led to receiving an internal company award that year.
+                </p>
+              </div>
+              <ul>
+                <li>
+                  Related Article:
+                  <a href="https://medium.com/@15catinthebox/14-reasons-to-adopt-stripes-payment-service-84c9c2a0214e" target="_blank">
+                    『14 Reasons to Adopt Stripe’s Payment Service』
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <nav>
+              <a href="#project-1on1-singles" class="next"><i class="ph-bold ph-arrow-fat-right"></i></a>
+              <a href="#projects" class="close"><i class="ph-bold ph-x"></i></a>
+            </nav>
+          </div>
+        </article>
+      </li>
+
+      <li class="card-list__item">
+        <a href="#project-1on1-singles" class="card-list__button show">
+          <i class="ph-bold ph-heart"></i>
+          <h3>1on1 Singles</h3>
+        </a>
+        <article id="project-1on1-singles" class="card-list__modal">
+          <a href="#projects" class="card-list__modal-overlay" aria-label="Close modal"></a>
+          <div class="card-list__modal-content">
+            <section>
+              <i class="ph-bold ph-sparkle"></i>
+              <h3>1on1 Singles</h3>
+              <img src="./images/1on1_singles.jpeg" alt="1on1 Singles admin screen" width="200">
+              <div class="card-list__modal-text">
+                <p>I was involved in the new development of the dating application “1on1 Singles.”</p>
+                <p>This application offers two types of matching services: online matching and in-store matching.</p>
+                <p>The app was developed using Flutter, and <strong>the online matching feature includes a real-time voice communication system powered by Agora.</strong></p>
+                <p>
+                  For the in-store management dashboard, <strong>I combined Rails Active Admin with Vue to fully leverage Rails-provided APIs</strong> while building an intuitive and user-friendly interface for staff members.
+                </p>
+              </div>
+
+              <ul>
+                <li>
+                  Related Article:
+                  <a href="https://medium.com/@15catinthebox/vue-in-active-admin-320a01816fa8" target="_blank">
+                    『Vue in Active Admin』
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <nav>
+              <a href="#project-couplink" class="prev"><i class="ph-bold ph-arrow-fat-left"></i></a>
+              <a href="#projects" class="close"><i class="ph-bold ph-x"></i></a>
+            </nav>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
   <section class="link">
     <h2>Links</h2>
-    <ul class="link__list">
-      <li class="link__item">
-        <a href="https://www.linkedin.com/in/togo-yokoyama/" target="_blank" class="link__button article-button">
+    <ul class="card-list">
+      <li class="card-list__item">
+        <a href="https://www.linkedin.com/in/togo-yokoyama/" target="_blank" class="card-list__button">
           <i class="ph-bold ph-linkedin-logo"></i>
           <h3>LinkedIn</h3>
         </a>
       </li>
-      <li class="link__item">
-        <a href="https://medium.com/@15catinthebox" target="_blank" class="link__button article-button">
+      <li class="card-list__item">
+        <a href="https://medium.com/@15catinthebox" target="_blank" class="card-list__button">
           <i class="ph-bold ph-article-medium"></i>
           <h3>Medium</h3>
         </a>
       </li>
-      <li class="link__item">
-        <a href="https://github.com/YokoyamaTogo" target="_blank" class="link__button article-button">
+      <li class="card-list__item">
+        <a href="https://github.com/YokoyamaTogo" target="_blank" class="card-list__button">
           <i class="ph-bold ph-github-logo"></i>
           <h3>GitHub</h3>
         </a>
