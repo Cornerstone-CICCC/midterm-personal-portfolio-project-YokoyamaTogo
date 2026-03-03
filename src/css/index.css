@@ -79,12 +79,12 @@ body > section h2 {
   margin-bottom: 18px;
 }
 
-/********************** intro ********************** */
-.intro {
+/********************** about ********************** */
+.about {
   text-align: center;
 }
 
-.intro p {
+.about p {
   width: min(720px, 100%);
   margin: 1em auto;
 }
