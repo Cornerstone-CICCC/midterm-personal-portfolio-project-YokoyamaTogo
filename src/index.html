@@ -150,6 +150,34 @@
 
   <section class="skills">
     <h2 class="scroll-reveal">Certifications</h2>
+    <ul class="cert__list" aria-label="Certification icons">
+      <li class="cert__item">
+        <button class="cert__button" type="button" data-cert-image="./images/ccna_cert.png" data-cert-title="CCNA Certification">
+          <img src="./images/ccna.png" alt="CCNA icon" height="150" />
+        </button>
+      </li>
+      <li class="cert__item">
+        <button class="cert__button" type="button" data-cert-image="./images/sap_cert.png" data-cert-title="AWS SAP Certification">
+          <img src="./images/sap.png" alt="AWS SAP icon" height="150" />
+        </button>
+      </li>
+      <li class="cert__item">
+        <button class="cert__button" type="button" data-cert-image="./images/lpic_cert.png" data-cert-title="LPIC Certification">
+          <img src="./images/lpic.png" alt="LPIC icon" height="150" />
+        </button>
+      </li>
+    </ul>
+
+    <div class="cert-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cert-modal-title">
+      <button class="cert-modal__overlay" type="button" aria-label="Close certificate modal"></button>
+      <div class="cert-modal__content">
+        <button class="cert-modal__close" type="button" aria-label="Close">
+          <i class="ph-bold ph-x"></i>
+        </button>
+        <h3 id="cert-modal-title"></h3>
+        <img class="cert-modal__image" src="" alt="" />
+      </div>
+    </div>
   </section>
 
   <section class="link">
