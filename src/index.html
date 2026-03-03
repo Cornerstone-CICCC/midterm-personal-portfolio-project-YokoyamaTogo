@@ -10,6 +10,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
 </head>
 <body>
+  <nav class="side-nav" aria-label="Section navigation">
+    <a href="#about">About</a>
+    <a href="#work-experiences">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certs</a>
+    <a href="#links">Links</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <header class="header">
     <img
       class="header__profile-img"
@@ -17,7 +27,7 @@
     <h1>Togo Yokoyama<br>Portfolio</h1>
   </header>
 
-  <section class="about">
+  <section id="about" class="about">
     <h2 class="scroll-reveal">About</h2>
     <p class="scroll-reveal">Nice to meet you. My name is Togo Yokoyama, and I am a Full Stack Developer with 4 years of experience.</p>
     <p class="scroll-reveal">
@@ -29,7 +39,7 @@
     </p>
   </section>
 
-  <section class="work-experiences">
+  <section id="work-experiences" class="work-experiences">
     <h2 class="scroll-reveal">Work Experiences</h2>
     <ul class="work-experiences__list">
       <li class="work-experiences__item scroll-reveal">
@@ -128,7 +138,7 @@
     </ul>
   </section>
 
-  <section class="skills">
+  <section id="skills" class="skills">
     <h2 class="scroll-reveal">Skills</h2>
     <ul class="skills__list">
       <li class="skills__item"><img src="https://skillicons.dev/icons?i=vue" alt="Vue" width="56" height="56" /></li>
@@ -143,7 +153,7 @@
     </ul>
   </section>
 
-  <section class="skills">
+  <section id="certifications" class="skills">
     <h2 class="scroll-reveal">Certifications</h2>
     <ul class="cert__list" aria-label="Certification icons">
       <li class="cert__item">
@@ -175,7 +185,7 @@
     </div>
   </section>
 
-  <section class="link">
+  <section id="links" class="link">
     <h2 class="scroll-reveal">Links</h2>
     <ul class="card-list">
       <li class="card-list__item">
@@ -199,7 +209,7 @@
     </ul>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2 class="scroll-reveal">Contact</h2>
     <form class="contact__form scroll-reveal" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="f7127dc7-8c78-46d6-b628-84b521998f0c">
