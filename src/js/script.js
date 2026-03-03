@@ -1,4 +1,4 @@
-const showSequentially = (parent, selector, delayStep) => {
+const showSequentially = (parent, selector, delayStep, initialDelay = 0) => {
   const animationKey = `animated${selector.replace(/[^a-z0-9]/gi, '')}`
   if (parent.dataset[animationKey] === 'true') return
   const targets = [...parent.querySelectorAll(selector)]
@@ -7,7 +7,7 @@ const showSequentially = (parent, selector, delayStep) => {
   targets.reduce((delay, target) => {
     setTimeout(() => target.classList.add('show'), delay)
     return delay + delayStep
-  }, 0)
+  }, initialDelay)
 
   parent.dataset[animationKey] = 'true'
 }
@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const animateSection = section => {
     showSequentially(section, '.card-list__button', 200)
     showSequentially(section, '.skills__item', 160)
+    showSequentially(section, '.scroll-reveal', 220, 160)
   }
 
   if ('IntersectionObserver' in window) {
@@ -26,7 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
         animateSection(entry.target)
       })
     }, {
-      threshold: 0.2
+      threshold: 0.05,
+      rootMargin: '0px 0px -20% 0px'
     })
 
     sections.forEach(section => observer.observe(section))
@@ -35,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const inScreen = elm => {
     const rect = elm.getBoundingClientRect()
-    return rect.top < window.innerHeight * 0.8 && rect.bottom > 0
+    return rect.top < window.innerHeight * 0.7 && rect.bottom > 0
   }
 
   const animateVisibleSections = () => {
