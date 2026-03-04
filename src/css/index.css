@@ -379,13 +379,14 @@ body > section h2 {
 }
 
 .cert__button {
+  display: block;
   width: 100%;
   padding: 16px;
   border: 1px solid #dbeafe;
   border-radius: 14px;
   background: linear-gradient(160deg, #f8fbff, #eef4ff);
   box-shadow: var(--shadow-elevation);
-  cursor: pointer;
+  text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -420,7 +421,7 @@ body > section h2 {
   z-index: 30;
 }
 
-.cert-modal.is-open {
+.cert-modal:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -428,9 +429,8 @@ body > section h2 {
 .cert-modal__overlay {
   position: absolute;
   inset: 0;
-  border: 0;
+  display: block;
   background: rgba(0, 0, 0, 0.62);
-  cursor: pointer;
   opacity: 0;
   transition: opacity 0.22s ease;
 }
@@ -447,26 +447,28 @@ body > section h2 {
   z-index: 1;
 }
 
-.cert-modal.is-open .cert-modal__overlay {
+.cert-modal:target .cert-modal__overlay {
   opacity: 1;
 }
 
-.cert-modal.is-open .cert-modal__content {
+.cert-modal:target .cert-modal__content {
   transform: translateY(0) scale(1);
 }
 
 .cert-modal__close {
   position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   top: 8px;
   right: 8px;
   width: 38px;
   height: 38px;
-  border: 0;
   border-radius: 999px;
   background: #eef4ff;
   color: var(--color-accent);
   font-size: var(--font-size-lg);
-  cursor: pointer;
+  text-decoration: none;
 }
 
 .cert-modal__content h3 {
@@ -571,6 +573,10 @@ body > section h2 {
 }
 
 body:has(.card-list__modal:target) {
+  overflow: hidden;
+}
+
+body:has(.cert-modal:target) {
   overflow: hidden;
 }
 

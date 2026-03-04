@@ -157,32 +157,54 @@
     <h2 class="scroll-reveal">Certifications</h2>
     <ul class="cert__list" aria-label="Certification icons">
       <li class="cert__item">
-        <button class="cert__button" type="button" data-cert-image="./images/ccna_cert.png" data-cert-title="CCNA Certification">
+        <a href="#cert-ccna" class="cert__button">
           <img src="./images/ccna.png" alt="CCNA icon" width="150" height="150" />
-        </button>
+        </a>
       </li>
       <li class="cert__item">
-        <button class="cert__button" type="button" data-cert-image="./images/sap_cert.png" data-cert-title="AWS SAP Certification">
+        <a href="#cert-sap" class="cert__button">
           <img src="./images/sap.png" alt="AWS SAP icon" width="150" height="150" />
-        </button>
+        </a>
       </li>
       <li class="cert__item">
-        <button class="cert__button" type="button" data-cert-image="./images/lpic_cert.png" data-cert-title="LPIC Certification">
+        <a href="#cert-lpic" class="cert__button">
           <img src="./images/lpic.png" alt="LPIC icon" width="150" height="150" />
-        </button>
+        </a>
       </li>
     </ul>
 
-    <div class="cert-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cert-modal-title">
-      <button class="cert-modal__overlay" type="button" aria-label="Close certificate modal"></button>
+    <article id="cert-ccna" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-ccna-title">
+      <a href="#certifications" class="cert-modal__overlay" aria-label="Close certificate modal"></a>
       <div class="cert-modal__content">
-        <button class="cert-modal__close" type="button" aria-label="Close">
+        <a href="#certifications" class="cert-modal__close" aria-label="Close">
           <i class="ph-bold ph-x"></i>
-        </button>
-        <h3 id="cert-modal-title"></h3>
-        <img class="cert-modal__image" src="" alt="" />
+        </a>
+        <h3 id="cert-ccna-title">CCNA Certification</h3>
+        <img class="cert-modal__image" src="./images/ccna_cert.png" alt="CCNA Certification" />
       </div>
-    </div>
+    </article>
+
+    <article id="cert-sap" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-sap-title">
+      <a href="#certifications" class="cert-modal__overlay" aria-label="Close certificate modal"></a>
+      <div class="cert-modal__content">
+        <a href="#certifications" class="cert-modal__close" aria-label="Close">
+          <i class="ph-bold ph-x"></i>
+        </a>
+        <h3 id="cert-sap-title">AWS SAP Certification</h3>
+        <img class="cert-modal__image" src="./images/sap_cert.png" alt="AWS SAP Certification" />
+      </div>
+    </article>
+
+    <article id="cert-lpic" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-lpic-title">
+      <a href="#certifications" class="cert-modal__overlay" aria-label="Close certificate modal"></a>
+      <div class="cert-modal__content">
+        <a href="#certifications" class="cert-modal__close" aria-label="Close">
+          <i class="ph-bold ph-x"></i>
+        </a>
+        <h3 id="cert-lpic-title">LPIC Certification</h3>
+        <img class="cert-modal__image" src="./images/lpic_cert.png" alt="LPIC Certification" />
+      </div>
+    </article>
   </section>
 
   <section id="links" class="link">
