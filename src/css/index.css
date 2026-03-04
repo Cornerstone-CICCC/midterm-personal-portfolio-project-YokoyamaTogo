@@ -602,27 +602,24 @@ body:has(.cert-modal:target) {
   position: relative;
 }
 
-.card-list__modal-content > nav {
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.card-list__modal-content > nav a {
+.card-list__modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 999px;
-  background: #EEE;
+  background: #eee;
   color: var(--color-accent);
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
+  z-index: 1;
 }
 
-.card-list__modal-content > nav a:hover {
+.card-list__modal-close:hover {
   transform: scale(1.08);
   background: var(--color-surface-hover);
 }
